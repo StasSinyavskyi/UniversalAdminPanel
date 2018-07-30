@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <link rel="stylesheet" href="/dist/css/reset.css">
+    <link rel="stylesheet" href="/dist/css/adminstyle.css">
+    <script type="text/javascript" src="/node_modules/underscore/underscore-min.js"></script>
+    <script type="text/javascript" src="/node_modules/ckeditor/ckeditor.js"></script>
+    <title>My site admin panel</title>
+    
+    
+    
+    <script id="templ-login-ajax" type="text/html">
+       <div class="login-form">
+            <span class="login-form-title"> Login ajax as:</span>
+            <form  name="ajaxForm">
+                Login: <br><input type="text" id="login-form-name" name="login"  value="test">
+                Password: <br><input type="password" id="login-form-pass" name="pass" value="">
+                
+                <div class="admin-login-form-btn-submit" onclick="loginAjax();"> Enter </div>              
+           </form>
+        </div>
+    </script>
+    
+    
+    
+</head>
+<body>
+    <header>
+        <div>
+            <div class="logo-img">
+                <a href="/"> <img src="/images/logo-5.png" alt="" width="100">  MY Site </a> 
+               
+            </div>
+            
+            
+            
+            <div class="header-login-panel">               
+                     <div id="sign-in" style="display:block;">  <div class="admin-header-login-panel-btn"  onclick="Hash.set('login');">Sign in</div></div>                     
+                     <div id="sign-out" style="display:none;">   
+                         <div  class="header-login-panel-btn" onclick="signOut();">Sign out</div>                           
+                         <div class="header-login-panel-img" data-title="example@example.com" id="header-email"><img id="ava" src="" alt="avatar"></div> 
+                     </div>             
+            </div>
+            
+            <div class="header-admin-logo"> Administrative panel </div>
+            
+        </div>
+    </header>
+    
+   
+    <section class="main">
+        <div class="wrapper">
+            <div class="header-admin-status" > Current page: <div id="current-page-info"> <b> Not signed in </b></div></div>
+            <div class="menu-left" >
+                <span onclick="Hash.set('');">Dashboard</span><br><br>
+                <div id="menu-left"></div>
+            </div>
+            <div class="content" id="content">
+                 user not signed in
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    <script type="text/javascript" src="/dist/js/admin.js">
+        
+       
+    </script>
+    
+    
+    
+    
+     <footer>
+          <div id="footer-container">
+
+              <div class="footer-menu-center">
+                   <div class="footer-menu-center-logo">
+                       <img src="/images/logo-5.png" alt=""  width="100"><br>
+                   </div>
+                   MySite (C) 2018 <br>
+                   All Rights Reserved.
+              </div>    
+        </div>
+     </footer>
+    
+     
+    
+</body>
+</html>

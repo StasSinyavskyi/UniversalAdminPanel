@@ -1,0 +1,80 @@
+{"settings":{
+    "goods":{"elements":[
+        {"name":"id_goods", "title":"ID", "isKey":"1", "type":"s", "lenght":"", "read":"1", "showInGrid":"1", "gridWidth":"50px", "parentDependant":"0"},
+        {"name":"change_date", "title":"Change date", "type":"s", "lenght":"", "read":"1", "showInGrid":"1", "gridWidth":"80px", "parentDependant":"0"},
+        {"name":"id_category", "title":"Category", "type":"d", "lenght":"", "read":"0", "showInGrid":"1", "gridWidth":"80px", "parentDependant":"1", 
+            "parents":{"tablename":"categories", "keyfield":"id_category", "titlefield":"title"}},
+        {"name":"title", "title":"Title", "type":"s", "lenght":"", "read":"0", "showInGrid":"1", "gridWidth":"80px", "parentDependant":"0"},
+        {"name":"description", "title":"Description", "type":"t", "lenght":"", "read":"0", "showInGrid":"0", "gridWidth":"80px", "parentDependant":"0"},
+        {"name":"price", "title":"Price", "type":"n", "lenght":"", "read":"0", "showInGrid":"1", "gridWidth":"80px", "parentDependant":"0"},
+        {"name":"tags", "title":"Tags", "type":"rb", "lenght":"", "read":"0", "showInGrid":"1", "gridWidth":"80px", "parentDependant":"2", 
+            "items":[
+                {"name":"none","keyfield":"0"},
+                {"name":"New","keyfield":"1"},
+                {"name":"Top","keyfield":"2"},
+                {"name":"Spec","keyfield":"3"}
+            ]},
+        {"name":"image", "title":"Main image", "type":"i", "lenght":"", "read":"0", "showInGrid":"0", "gridWidth":"80px", "parentDependant":"0"},
+        {"name":"status", "title":"Status", "type":"rb", "lenght":"", "read":"0", "showInGrid":"1", "gridWidth":"80px", "parentDependant":"2", 
+            "items":[
+                {"name":"off","keyfield":"0"},
+                {"name":"on","keyfield":"1"}
+            ]},
+        {"name":"images", "title":"Images", "type":"is", "lenght":"", "read":"0", "showInGrid":"0", "gridWidth":"80px", "parentDependant":"0", 
+            "attachment":{"tablename":"goods_attachments", "id":"id_goods_attachment", "id_parent":"id_goods", "parent_id":"id_goods", "file_name":"name", "type":"0"}},
+        {"name":"videos", "title":"Videos", "type":"vs", "lenght":"", "read":"0", "showInGrid":"0", "gridWidth":"80px", "parentDependant":"0", 
+            "attachment":{"tablename":"goods_attachments", "id":"id_goods_attachment", "id_parent":"id_goods", "parent_id":"id_goods", "file_name":"name", "type":"1"}}            
+    ], "buttons":[
+        {"name":"button_delete", "title":"Delete", "action":"delete", "lenght":"", "read":"0", "showInGrid":"1", "gridWidth":"80px", "parentDependant":"0"},
+        {"name":"button_edit", "title":"Edit", "action":"edit", "lenght":"", "read":"0", "showInGrid":"1", "gridWidth":"80px", "parentDependant":"0"}
+    ], "title":"Goods"},  
+    "categories":{"elements":[
+        {"name":"id_category", "title":"ID", "isKey":"1", "type":"s", "lenght":"", "read":"1", "showInGrid":"1", "gridWidth":"30px", "parentDependant":"0"},
+        {"name":"change_date", "title":"Change date", "type":"s", "lenght":"", "read":"1", "showInGrid":"1", "gridWidth":"80px", "parentDependant":"0"},
+        {"name":"title", "title":"Title", "type":"s", "lenght":"", "read":"0", "showInGrid":"1", "gridWidth":"80px", "parentDependant":"0"},
+        {"name":"image", "title":"Image", "type":"i", "lenght":"", "read":"0", "showInGrid":"0", "gridWidth":"80px", "parentDependant":"0"},
+        {"name":"status", "title":"Status", "type":"rb", "lenght":"", "read":"0", "showInGrid":"1", "gridWidth":"80px", "parentDependant":"2",
+            "items":[
+                {"name":"off","keyfield":"0"},
+                {"name":"on","keyfield":"1"}
+            ]},
+        {"name":"sort_order", "title":"Sort order", "type":"n", "lenght":"", "read":"0", "showInGrid":"0", "gridWidth":"80px", "parentDependant":"0"}     
+     ], "buttons":[
+        {"name":"button_delete", "title":"Delete", "action":"delete", "lenght":"", "read":"0", "showInGrid":"1", "gridWidth":"80px", "parentDependant":"0"},
+        {"name":"button_edit", "title":"Edit", "action":"edit", "lenght":"", "read":"0", "showInGrid":"1", "gridWidth":"80px", "parentDependant":"0"} 
+     ], "title":"Categories"},  
+    "orders":{"elements":[
+        {"name":"id_order", "title":"ID", "isKey":"1", "type":"s", "lenght":"", "read":"1", "showInGrid":"1", "gridWidth":"40px", "parentDependant":"0"},
+        {"name":"date_order", "title":"Order date", "type":"s", "lenght":"", "read":"1", "showInGrid":"1", "gridWidth":"80px", "parentDependant":"0"},
+        {"name":"change_date", "title":"Change date", "type":"s", "lenght":"", "read":"1", "showInGrid":"1", "gridWidth":"80px", "parentDependant":"0"},
+        {"name":"id_goods", "title":"Good ID", "type":"d", "lenght":"", "read":"1", "showInGrid":"1", "gridWidth":"80px", "filterExclude":"1", "parentDependant":"1",
+            "parents":{"tablename":"goods", "keyfield":"id_goods", "titlefield":"title"}},
+        {"name":"quantity", "title":"Quantity", "type":"n", "lenght":"", "read":"1", "showInGrid":"1", "gridWidth":"80px", "parentDependant":"0"},
+        {"name":"name", "title":"Client name", "type":"s", "lenght":"", "read":"1", "showInGrid":"0", "gridWidth":"80px", "parentDependant":"0"},
+        {"name":"email", "title":"Client email", "type":"s", "lenght":"", "read":"1", "showInGrid":"0", "gridWidth":"80px", "parentDependant":"0"},
+        {"name":"phone", "title":"Client phone", "type":"s", "lenght":"", "read":"1", "showInGrid":"0", "gridWidth":"80px", "parentDependant":"0"},
+        {"name":"closed", "title":"Order finish", "type":"rb", "lenght":"", "read":"0", "showInGrid":"1", "gridWidth":"80px", "parentDependant":"2",
+         "items":[
+                {"name":"No","keyfield":"0"},
+                {"name":"Yes","keyfield":"1"}
+            ]}  
+    ], "buttons":[
+        {"name":"button_delete", "title":"Delete", "action":"delete", "lenght":"", "read":"0", "showInGrid":"1", "gridWidth":"80px", "parentDependant":"0"},
+        {"name":"button_edit", "title":"Edit", "action":"edit", "lenght":"", "read":"0", "showInGrid":"1", "gridWidth":"80px", "parentDependant":"0"}
+    ], "title":"Orders"},   
+    "users":{"elements":[
+        {"name":"id_user", "title":"ID", "isKey":"1", "type":"s", "lenght":"", "read":"1", "showInGrid":"1", "gridWidth":"30px", "parentDependant":"0"},
+        {"name":"change_date", "title":"Change date", "type":"s", "lenght":"", "read":"1", "showInGrid":"1", "gridWidth":"80px", "parentDependant":"0"},
+        {"name":"name", "title":"User name", "type":"s", "lenght":"", "read":"0", "showInGrid":"1", "gridWidth":"80px", "parentDependant":"0"},
+        {"name":"email", "title":"User email", "type":"s", "lenght":"", "read":"0", "showInGrid":"1", "gridWidth":"80px", "parentDependant":"0"},
+        {"name":"password", "title":"User password", "type":"s", "lenght":"", "read":"0", "showInGrid":"0", "gridWidth":"80px", "parentDependant":"0"},
+        {"name":"is_admin", "title":"Admin", "type":"rb", "lenght":"", "read":"0", "showInGrid":"1", "gridWidth":"80px", "parentDependant":"2",
+            "items":[
+                {"name":"No","keyfield":"0"},
+                {"name":"Yes","keyfield":"1"}
+            ]}     
+    ], "buttons":[
+        {"name":"button_delete", "title":"Delete", "action":"delete", "lenght":"", "read":"0", "showInGrid":"1", "gridWidth":"80px", "parentDependant":"0"},
+        {"name":"button_edit", "title":"Edit", "action":"edit", "lenght":"", "read":"0", "showInGrid":"1", "gridWidth":"80px", "parentDependant":"0"}
+    ], "title":"Users"}
+}, "userCredentialsPlaceholder":{"1":"1"}, "userDashboardDataPlaceholder":{"1":"1"}}

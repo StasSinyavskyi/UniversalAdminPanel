@@ -1,0 +1,527 @@
+/* odd items 1,3,5,7,... */
+
+
+.main {
+    width: 100%;
+    clear: both;
+}
+
+.wrapper {
+    margin: 0 auto;
+}
+
+
+.header-login-panel {
+    width: 250px;
+    display:block;
+   float: right;
+}
+
+.header-login-panel-btn {
+    
+    float: right;
+    
+    font-size: 1em;
+    padding: 10px;
+    color: #6a6c9c;
+    margin: 36px 15px;
+    text-decoration: none;
+    text-align: right;
+}
+
+.header-login-panel-btn:hover {  
+    color: #1e1f35;
+}
+
+.header-login-panel-img {
+    position: relative;
+    float: right;
+    margin-top: 30px;
+    width: 60px;
+    
+}
+
+.header-login-panel-img:hover::after {
+    content: attr(data-title);
+    position: absolute; /* Абсолютное позиционирование */
+    left: -40px; 
+    top: -29px;
+    z-index: 1; /* Отображаем подсказку поверх других элементов */
+    background: rgba(193, 232, 250, 0.4); /* Полупрозрачный цвет фона */
+    
+    font-size: 0.7em;
+    padding: 5px 5px; /* Поля */
+    border: 1px solid #00abfa; /* Параметры рамки */
+    max-width: 150px;
+    display: block;
+    word-wrap: break-word;
+}
+
+
+
+.logo-img {
+    width: 250px;
+    height: 100px;
+   
+    display:block;
+    text-align: left;
+    float: left;
+    margin-bottom: 20px;
+} 
+
+
+
+.logo-img a{
+    font-size: 1.33em;
+    color: #1e1f35;
+    text-decoration: none;
+}
+
+.header-admin-logo{
+    font-size: 1.2em;
+    color: #00305f;
+    text-align: center;
+    margin: 20 auto;
+}
+
+
+footer {
+    max-width: 100%; 
+    text-align: center;
+    color: white;
+    border-top: 2px solid #eceef1;
+    margin-top: 100px;
+    clear: both;
+}
+
+#footer-container {
+     max-width: 1200px; 
+    height: 70px;
+    margin: 20px auto ; 
+    background: #fff;
+    display: block;
+    
+}
+
+
+.footer-menu-center {
+    text-align: center;
+    display: block;
+    margin: 0 auto 60px auto;
+    font-size: 0.86em;
+    font-weight: medium;
+    color: #c3c4d4; 
+    clear:both;
+    
+}
+
+.footer-menu-center-logo {
+    color: #4fc7ff;
+    font-size: 3.2em;
+    font-weight: medium;
+    text-align: center;
+    margin: 0 auto;
+    
+}
+
+
+.menu-left {
+    width: 130px;
+    min-height: 300px;
+    height: auto;
+    float: left;
+    border: 1px solid #b4b4b4;
+    text-align: left;
+    text-decoration: none;
+    padding: 5px 20px;
+    background: #d9d5d5;
+}
+
+.menu-left ul{
+    list-style:none;
+}
+
+.menu-left li{
+    color: #0c3b69;
+    cursor: pointer;
+    padding: 2px 0;
+}
+
+.menu-left li:hover{
+    color: #1b7fd3;
+}
+
+.menu-left span{
+    font-weight: 600;
+    cursor: pointer;
+    color: #0c3b69;
+}
+
+.menu-left span:hover{
+    color: #1b7fd3;
+}
+
+.content {
+    position: relative;
+    display: inline-block;
+    max-width: 1200px;
+    width: 80%;
+    min-height: 300px;
+    height: auto;
+    float: left;
+    border: 1px solid #bab8b8;
+    padding: 5px;
+}
+
+.admin-header-login-panel-btn {
+    
+    float: right;
+    
+    font-size: 1em;
+    padding: 10px;
+    color: #6a6c9c;
+    margin: 36px 15px;
+    text-decoration: none;
+    text-align: right;
+}
+
+.admin-header-login-panel-btn:hover {  
+    color: #1e1f35;
+}
+
+.header-admin-status {
+    display: block;
+    border-top: 1px solid #c1c1c1; 
+    border-bottom: 1px solid #c1c1c1; 
+    text-align: left;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+#sign-in, .header-login-panel-btn {
+    cursor: pointer;
+}
+
+
+
+#current-page-info{
+    display: inline-block;
+}
+
+.login-form{
+    width: 250px;
+    height: auto;
+    padding: 10px;
+    margin: 0 auto;
+    
+}
+.login-form input{
+    margin: 5px;
+    padding: 3px;
+    font-size: 1.0em;
+}
+
+.login-form-title{
+    padding: 10px;
+    font-size: 1.1em;
+    text-align: left;
+    margin: 20px;
+    display: block;
+}
+
+.admin-login-form-btn-submit {
+    display: block;
+    width:70px; 
+    height:20px; 
+    border: 1px solid #8e8e8e;
+    border-radius: 2px;
+    background: #ddd5d5;
+    margin: 10px auto;
+    text-align: center;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.admin-login-form-btn-submit:hover{
+    background: #a29c9c;
+}
+
+.showblock{
+    display: block;
+}
+
+.hideblock{
+    display: none;
+}
+
+
+
+
+
+
+.pma_table {
+    width: 100%;
+   
+}
+
+.pma_table td {
+    position: static;
+    padding: 3px;
+    border: 1px solid #a8aeb2; 
+    border-collapse: collapse;
+}
+
+.odd {
+    background: #dae3ea;
+}
+
+.even {
+    background: #f0f4f7;
+}
+
+.pma_table th {
+    background: #bbc1c6;
+    padding: 3px;
+    border: 1px solid #8c9296; 
+    border-collapse: collapse;
+   
+}
+
+.pma_table th.draggable span,
+.pma_table tbody td span {
+    display: block;
+    overflow: hidden;
+}
+
+.draggable {
+    
+}
+
+.pma_table .button{
+    vertical-align: middle;
+    text-align: center;
+    
+}
+
+.pma_table .button span{
+    background: #6296d3;
+    cursor: pointer;
+    
+}
+
+.pma_table .button span:hover{
+    background: #67bfe0;
+}
+
+.button-title{
+   
+}
+
+.table-title {
+    font-size: 1.2em;
+    font-weight: 600;
+    width: 100%;
+    padding:5px 0 0 5px;
+    color: #2e3a93;
+    text-align: left;
+    display: block;
+    height: 50px;
+    position: relative;
+}
+.table-title button{
+    text-align: left;
+    font-size: 1em;
+    padding: 2px 5px;
+    margin: 0 5px;
+    right: 6px;
+    top: 10px;
+    background: #93b2d8;
+    float: right;
+    display: inline-block;
+}
+
+.edit-title{
+    font-size: 1.1em;
+    display: block;
+    width: 100%;
+    background: #a3a4a5;
+    text-align: left;
+    padding 5px 0;
+    padding-left: 10px;
+    height: 30px;
+    box-sizing: border-box;
+}
+
+#edit-title-not-saved{
+    color: red;
+    display: none;
+   
+}
+
+.edit-item-container{
+    display: block;
+    width: 100%;
+    border: 1px solid #5f84cb;
+    min-height: 50px;
+    padding: 10px 0;
+   overflow: hidden;
+}
+
+.edit-item-title{
+    display: block;
+    width: 20%;
+    font-size: 1em;
+    float: left;
+    padding: 4px 10px;
+    text-align: right;
+}
+
+.edit-item-content{
+    display: block;
+    width: 70%;
+    font-size: 1em;
+    float: left;
+    border-left: 1px solid #5f84cb;
+    text-align: left;
+    padding: 4px 10px;
+}
+
+.edit-item-content textarea{
+    width: 90%;
+    height: 200px;
+    position: relative;
+}
+
+.edit-item-img-container{
+    display: block;
+    border-top: 2px solid #a2b2bf;
+    padding: 5px 3px;
+}
+
+.button-div{
+    width: 70px;
+    height: 25px;
+    background:  #95c6ef;
+    border-radius: 1px;
+    padding: 3px;
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid #1b7fd3;
+    margin: 5px 0;
+}
+.button-div:hover{
+    background: #2a75b4;
+}
+
+#edit-form-submit-button{
+    border-radius: 10px;
+    border: 1px solid #c3ecff;
+    background: #3aa0c6; 
+    font-size: 1.1em;
+    font-weight: medium;
+    padding: 20px 15px;
+    color: #0e1839;
+    text-decoration: none;
+    box-shadow: 5px 10px 15px #e8f7ff;
+    width: 150px;
+    display: block;
+    margin: 30px auto ;
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+
+#edit-form-submit-button:hover{
+    background: #097291;
+}
+
+
+
+/* делаем пагинацию страниц(нумерацию) */
+
+.pagination{
+    margin: 15px auto;
+    clear: both;
+    height: 40px;
+    width: 319px;
+    
+}
+
+#pagination-digg li{
+    border:0; margin:0; padding:0;
+    font-size:11px;
+    list-style:none;
+    margin-right:2px;
+}
+#pagination-digg span{
+    border:solid 1px #9aafe5;
+    margin-right:2px;
+     color:#0e509e;
+    display:block;
+    float:left;
+    padding:3px 6px;
+    text-decoration:none;
+    cursor: pointer;
+}
+#pagination-digg .previous-off,
+#pagination-digg .next-off {
+    border:solid 1px #DEDEDE;
+    color:#888888;
+    display:block;
+    float:left;
+    font-weight:bold;
+    margin-right:2px;
+    padding:3px 4px;
+}
+#pagination-digg .next span,
+#pagination-digg .previous span {
+    font-weight:bold;
+}
+#pagination-digg .active{
+    background:#2e6ab1;
+    color:#FFFFFF;
+    font-weight:bold;
+    display:block;
+    float:left;
+    padding:4px 6px;
+}
+
+#pagination-digg span:hover{
+    border:solid 1px #0e509e;
+    
+    }
+
+
+.filter-wrap{
+    display: none;
+   
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 50px;
+    border: 2px solid #d3d4d8;
+    margin: 6px 0;
+    text-align: left;
+    transition: 0.5s linear top ;
+}
+
+.filter-item-wrap{
+    
+    margin: 10px;
+    
+}
+
+.filter-item-wrap td{
+    padding: 3px;
+    vertical-align:middle;
+}
+
+.filter-item-wrap span{
+    font-size: 1em;
+    color: #0d0974;
+   
+}
+
+.text-color-red{
+    color: red;
+}

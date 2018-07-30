@@ -1,0 +1,10 @@
+{
+  "name": "UniversalAdminPanel",
+  "version": "1.0.0",
+  "description": "test project",
+  "author": "Stanislav Syniavskyi",
+  "dependencies": {
+    "ckeditor": "4.5.7",
+    "underscore": "^1.9.1"
+  }
+}
