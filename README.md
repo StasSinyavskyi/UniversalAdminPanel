@@ -1,2 +1,4 @@
 # UniversalAdminPanel
-Universal administrative panel for any php site 
+Universal customizable administrative panel for any php site 
+
+
