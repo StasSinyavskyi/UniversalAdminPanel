@@ -18,29 +18,15 @@ UAC consists of two parts:
 File                                | Description
 ------------------------------------|------------------------
 config/adminsetcatalog.json         | Main castomization file
-                                    |
 dist/css/adminstyle.css             | Table of styles
-                                    |
 dist/js/admin.js                    | Client script
-                                    |
-                                    |
-inc/                                | Server side PHP scripts
-                                    |
+inc/                                | Server side PHP script
 inc/components/FormData.php         | FormData paser component 
-                                    |
 inc/components/ImageManipulator.php | Image resize component
-                                    |
 inc/config/routs.php                | UAP routes
-                                    |
 inc/controllers/apiController.php   | Controller
-                                    |
 inc/models/api.php                  | Model
-                                    |
-                                    |
 templates/adminpanel/admin.html     | Viewer
-                                    |
-                                    |
-                                    |
 uploads                             | Folder for image uploading
 
 -----------------------------------------------------------------
@@ -88,6 +74,7 @@ This strict structured json file decribes your dstabase structure and client-sid
 3. "isKey"      - (not required) If "1"  tells that this field id key  ("isKey":"1")
 
 4. "type"       - (required) Field interface type 
+
                     --|---------------
                     s | string, 
                     n | numerous, 
