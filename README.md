@@ -1,5 +1,5 @@
 # UniversalAdminPanel
-Universal administrative panel (UAP)  (version 1.0)
+h1 Universal administrative panel (UAP)  (version 1.0)
 
 UAP easylly allows to add admin interface to your site. Wich can help to manage all site's data. 
 For example: if your site is a internet shop you can add/delete new products, edit it description, upload product's pictures to the gallery and manage orders.
@@ -8,12 +8,12 @@ UAP implements MVC model.
 
 UAC consists of two parts:
 
-1 - One page client app (javascript)
-2 - Server side app which implements API interface (php)
+1. - One page client app (javascript)
+2. - Server side app which implements API interface (php)
 
 -----------------------------------------------------------------
 
-File structure:
+h2 File structure:
 
 
 config/adminsetcatalog.json         - Main castomization file
