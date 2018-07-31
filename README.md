@@ -67,16 +67,16 @@ This strict structured json file decribes your dstabase structure and client-sid
 
 **"elements"** - has properties:
 
-1. "name"       - (required) Table column name
+1. **"name"**       - (required) Table column name
 
-2. "title"      - (required) How this column will be titled in user interface
+2. **"title"**      - (required) How this column will be titled in user interface
 
-3. "isKey"      - (not required) If "1"  tells that this field id key  ("isKey":"1")
+3. **"isKey"**      - (not required) If "1"  tells that this field id key  ("isKey":"1")
 
-4. "type"       - (required) Field interface type 
+4. **"type"**       - (required) Field interface type 
 
-"type" | Value
-  -----|---------------
+ type  | Value
+-------|---------------
      s | string, 
      n | numerous, 
      t | multiline text, 
@@ -86,21 +86,21 @@ This strict structured json file decribes your dstabase structure and client-sid
      vs| multi videos,
      d | dependant on other table
 
-5. "read"       - (required) Readonly field (0|1) (1 - readonly active)
+5. **"read"**       - (required) Readonly field (0|1) (1 - readonly active)
 
-6. "showInGrid" - (required) Tells if this fiel should be shown in interface grid (entity's list table)
+6. **"showInGrid"** - (required) Tells if this fiel should be shown in interface grid (entity's list table)
 
-7. "gridWidth"  - (required) Width in pixels  eg: "gridWidth":"80px"   
+7. **"gridWidth"**  - (required) Width in pixels  eg: "gridWidth":"80px"   
 
-8. "parentDependant" - (required) (0|1|2)  Type of dependancy 
+8. **"parentDependant"** - (required) (0|1|2)  Type of dependancy 
                     0 - none
                     1 - dependant on other table  (suitable only for type = d). 
                         To substitute some id-field with value from the corresponding table field
                     2 - offers list of possible dependant values for choose (suitable only for type = rb)
                         To substitute some id-field with value from the list
                     
-9. "parents"    - (required if "type" is "d") It is object wich decribes parent table key fields.  
+9. **"parents"**    - (required if "type" is "d") It is object wich decribes parent table key fields.  
                     Properties: "tablename" - 
                                 "keyfield"  - 
                                 "titlefield"- 
-10."items"
+10. **"items"**
