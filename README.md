@@ -8,43 +8,45 @@ UAP implements MVC model.
 
 UAC consists of two parts:
 
-1. One page client app (javascript)
+1. One-page client app (javascript)
 2. Server side app which implements API interface (php)
 
 -----------------------------------------------------------------
 
 ### File structure:
-
-
-config/adminsetcatalog.json         - Main castomization file
-
-dist/css/adminstyle.css             - Table of styles
-
-dist/js/admin.js                    - Client script
-
-
-inc/                                - Server side PHP scripts
-
-inc/components/FormData.php         - FormData paser component 
-
-inc/components/ImageManipulator.php - Image resize component
-
-inc/config/routs.php                - UAP routes
-
-inc/controllers/apiController.php   - Controller
-
-inc/models/api.php                  - Model
-
-
-templates/adminpanel/admin.html     - Viewer
-
-
-
-uploads                             - Folder for image uploading
+                    
+File                                | Description
+------------------------------------|------------------------
+config/adminsetcatalog.json         | Main castomization file
+                                    |
+dist/css/adminstyle.css             | Table of styles
+                                    |
+dist/js/admin.js                    | Client script
+                                    |
+                                    |
+inc/                                | Server side PHP scripts
+                                    |
+inc/components/FormData.php         | FormData paser component 
+                                    |
+inc/components/ImageManipulator.php | Image resize component
+                                    |
+inc/config/routs.php                | UAP routes
+                                    |
+inc/controllers/apiController.php   | Controller
+                                    |
+inc/models/api.php                  | Model
+                                    |
+                                    |
+templates/adminpanel/admin.html     | Viewer
+                                    |
+                                    |
+                                    |
+uploads                             | Folder for image uploading
 
 -----------------------------------------------------------------
 
-### --- adminsetcatalog.json ---
+
+### adminsetcatalog.json 
 
 
 
@@ -62,22 +64,22 @@ This strict structured json file decribes your dstabase structure and client-sid
 
 **entity** consists of two hard-named arrays **"elements"**  and **"buttons"**  and one proprty **"title"**
 
-```json
-"entity1":{
-    "elements":[],
-    "buttons":[],
-    "title":""
-    }
-```
 
-"elements" is the array of objects and describes all entity's properties (table columns)
-
-"buttons" is the array of objects and describes all entity's interface buttons (actions)
-
-"title" is a name of entity (how it will be titled in user interface).
+    "entity1":{
+        "elements":[],
+        "buttons":[],
+        "title":""
+        }
 
 
-"elements" - has properties:
+**"elements"** is the array of objects and describes all entity's properties (table columns)
+
+**"buttons"** is the array of objects and describes all entity's interface buttons (actions)
+
+**"title"** is a name of entity (how it will be titled in user interface).
+
+
+**"elements"** - has properties:
 
 1. "name"       - (required) Table column name
 
@@ -86,14 +88,15 @@ This strict structured json file decribes your dstabase structure and client-sid
 3. "isKey"      - (not required) If "1"  tells that this field id key  ("isKey":"1")
 
 4. "type"       - (required) Field interface type 
-                    s - string, 
-                    n - numerous, 
-                    t - multiline text, 
-                    rb- radioButton, 
-                    i - single image,
-                    is- multi images,
-                    vs- multi videos,
-                    d - dependant on other table
+                    --|---------------
+                    s | string, 
+                    n | numerous, 
+                    t | multiline text, 
+                    rb| radioButton, 
+                    i | single image,
+                    is| multi images,
+                    vs| multi videos,
+                    d | dependant on other table
 
 5. "read"       - (required) Readonly field (0|1) (1 - readonly active)
 
