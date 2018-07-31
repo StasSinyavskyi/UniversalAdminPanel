@@ -1,5 +1,5 @@
-# UniversalAdminPanel
-h1 Universal administrative panel (UAP)  (version 1.0)
+
+## Universal administrative panel (UAP)  (version 1.0)
 
 UAP easylly allows to add admin interface to your site. Wich can help to manage all site's data. 
 For example: if your site is a internet shop you can add/delete new products, edit it description, upload product's pictures to the gallery and manage orders.
@@ -8,12 +8,12 @@ UAP implements MVC model.
 
 UAC consists of two parts:
 
-1. - One page client app (javascript)
-2. - Server side app which implements API interface (php)
+1. One page client app (javascript)
+2. Server side app which implements API interface (php)
 
 -----------------------------------------------------------------
 
-h2 File structure:
+### File structure:
 
 
 config/adminsetcatalog.json         - Main castomization file
@@ -44,31 +44,31 @@ uploads                             - Folder for image uploading
 
 -----------------------------------------------------------------
 
---- adminsetcatalog.json ---
+### --- adminsetcatalog.json ---
 
 
 
 This strict structured json file decribes your dstabase structure and client-side user interface inside one "settings" object.
 
-"settings":{
+    "settings":{
         "entity1":{},
         "entity2":{},
         "entity3":{}
         }
 
-Entity  is a Child object which describes particular table in site database.
+**entity**  is a Child object which describes particular table in site database.
 
-entity should be named the same as corresponding table 
+**entity** should be named the same as corresponding table 
 
-Entity consists of two hard-named arrays "elements"  and "buttons"  and one proprty "title"
+**entity** consists of two hard-named arrays **"elements"**  and **"buttons"**  and one proprty **"title"**
 
-
+```json
 "entity1":{
     "elements":[],
     "buttons":[],
     "title":""
     }
-
+```
 
 "elements" is the array of objects and describes all entity's properties (table columns)
 
