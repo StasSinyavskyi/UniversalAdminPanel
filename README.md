@@ -75,15 +75,16 @@ This strict structured json file decribes your dstabase structure and client-sid
 
 4. "type"       - (required) Field interface type 
 
-                    --|---------------
-                    s | string, 
-                    n | numerous, 
-                    t | multiline text, 
-                    rb| radioButton, 
-                    i | single image,
-                    is| multi images,
-                    vs| multi videos,
-                    d | dependant on other table
+"type" | Value
+  -----|---------------
+     s | string, 
+     n | numerous, 
+     t | multiline text, 
+     rb| radioButton, 
+     i | single image,
+     is| multi images,
+     vs| multi videos,
+     d | dependant on other table
 
 5. "read"       - (required) Readonly field (0|1) (1 - readonly active)
 
