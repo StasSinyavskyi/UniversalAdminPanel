@@ -65,6 +65,7 @@ This strict structured json file decribes your dstabase structure and client-sid
 **"title"** is a name of entity (how it will be titled in user interface).
 
 
+
 **"elements"** - has properties:
 
 1. **"name"**       - (required) Table column name
@@ -75,7 +76,7 @@ This strict structured json file decribes your dstabase structure and client-sid
 
 4. **"type"**       - (required) Field interface type 
 
- type  | Value
+type   | Value
 -------|---------------
      s | string, 
      n | numerous, 
@@ -99,8 +100,44 @@ This strict structured json file decribes your dstabase structure and client-sid
                     2 - offers list of possible dependant values for choose (suitable only for type = rb)
                         To substitute some id-field with value from the list
                     
-9. **"parents"**    - (required if "type" is "d") It is object wich decribes parent table key fields.  
-                    Properties: "tablename" - 
-                                "keyfield"  - 
-                                "titlefield"- 
-10. **"items"**
+9. **"parents"**    - (required if "type" is "d") It is the object wich decribes parent table key fields. In this case type "d" field Data 
+                    will be substituted for Data from the parent table according to key field conjunction ("name" -> "keyfield")
+                    Properties: "tablename" - parent table name (as in DB)
+                                "keyfield"  - index key table field
+                                "titlefield"- field (in parent table) is uded as showed data
+                                
+10. **"items"**     - (required if "type" is "rb") It is the array of objects which used as data list. In this case type "rb" field Data 
+                    will be substituted for Data from the list according to key field conjunction ("name" -> "keyfield")
+                    Each object in the array has two properties **"name"** and **"keyfield"**         
+                    **"name"**      - list element title (how it appears to user to choose)           
+                    **"keyfield"**  - data to store in database when this element is chosen
+                    
+11. **"attachment"**- (required if "type" is "is" or "vs") It is the object which describes table for Image (is) or video (vs) attachments
+                    This object has several parameters:
+                    **"tablename"** - name of table for stosing attachments (as in DB)
+                    **"id"**        - index key field in the attachements table 
+                    **"id_parent"** - index key field in the current entity table
+                    **"parent_id"** - name of the field in the attachements table wich contain current entity ID (link to the entity key field) 
+                    **"file_name"** - name of the field in the attachements table wich contain image|video fileneme (how they stored in "upload" folder) 
+                    **"type"**      - content type (1|0) 0-image, 1-video
+       
+       
+       
+**"buttons"** is an array of object. Each object describes one action Button which appears in  entity's grid. Each object in the array has  properties:
+
+1. **"name"**       - Button system name
+
+2. **"title"**      - Title on the button
+
+3. **"action"**     - This button action. (delete|edit) 
+
+4. **"showInGrid"   - (0|1)  1-button will show in grid
+
+5. **""gridWidth"   - Width in pixels  eg: "gridWidth":"80px"
+
+
+
+**"title"** is a name of the entity (how it appears to user)
+
+
+
