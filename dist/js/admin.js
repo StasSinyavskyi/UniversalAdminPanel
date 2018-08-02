@@ -1,3 +1,5 @@
+//"use strict";
+
 var statusLogin = false; //true-login, false-not
 var globalSettings = ""; //object with settings
 var numberTextareasFoReplaceToCkEditor = 0;
@@ -6,7 +8,7 @@ var numberNewvideos = 0;
 var rowCount = 0;
 var rowPerPage = 0;
 
-var HostName = "booknew";
+var HostName = "catalog";
 
 var pagesOnPage = 5; //the whole number of pages on page
 
@@ -45,7 +47,7 @@ function dashboardAjax() {
 }
 
 //**** load particular entity grid data and show it in grid
-function getEntityAjax(entity, page = "1") {
+function getEntityAjax(entity, page) {
     serial = "";
     pageString = "";
     if (page > 1) {
@@ -1255,13 +1257,9 @@ function getButton(title, url, type) {
     }
 }
 
-function entityGrid(entity) {}
 
-function entityEdit(entity, entityID) {
-    //showEntityEditAddForm(entity,entityID);
-}
+//**** ajax queries ------------------------------------------------------------
 
-function entityAdd(entity) {}
 
 function ajax_post(url, params, callback) {
     xmlhttp = new XMLHttpRequest();
@@ -1362,13 +1360,11 @@ function ajax_delete(url, entity, entityId, callback) {
     xmlhttp.send();
 }
 
-function supports_html5_storage() {
-    try {
-        return "localStorage" in window && window["localStorage"] !== null;
-    } catch (e) {
-        return false;
-    }
-}
+
+
+
+//**** routing  ------------------------------------------------------------
+
 
 function unknownRoot() {
     //action for unknown roots
@@ -1385,7 +1381,7 @@ function hashChange() {
         if (hash[0] == "login") {
             showlogin();
         } else {
-            getEntityAjax(hash[0]);
+            getEntityAjax(hash[0],"1");
         }
     } else if (hash.length == 2) {
         if (hash[1] == "add") {
@@ -1429,5 +1425,18 @@ var Hash = {
         window.location.hash = vars;
     }
 };
+
+
+
+//**** local storage section-----------------------------------------------
+
+
+function supports_html5_storage() {
+    try {
+        return "localStorage" in window && window["localStorage"] !== null;
+    } catch (e) {
+        return false;
+    }
+}
 
 restoreGlobalSettingsLocalStorage();
